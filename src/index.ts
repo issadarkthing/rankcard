@@ -1,5 +1,5 @@
 import Canvacord from "./Canvacord";
-import Rank from "./Rank";
+import RankInternal from "./Rank";
 
 try {
   setTimeout(() => {
@@ -7,6 +7,7 @@ try {
   })
 } catch {}
 
+export const Rank = RankInternal;
 export default {
   Rank,
   write: Canvacord.write,
