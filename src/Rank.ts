@@ -564,7 +564,16 @@ class Rank {
     ctx.font = `60px ${ops.fontX}`;
     const medalValueSpacing = 110;
 
-    const bronze = await Canvas.loadImage(this.data.bronze.source);
+    const [
+      bronze,
+      silver,
+      gold,
+    ] = await Promise.all([
+      Canvas.loadImage(this.data.bronze.source),
+      Canvas.loadImage(this.data.silver.source),
+      Canvas.loadImage(this.data.gold.source),
+    ]);
+
     ctx.drawImage(bronze, this.data.bronze.x, this.data.bronze.y, 120, 120);
     ctx.fillText(
       this.data.bronze.value, 
@@ -572,7 +581,6 @@ class Rank {
       this.data.bronze.y + 85,
     );
 
-    const silver = await Canvas.loadImage(this.data.silver.source);
     ctx.drawImage(silver, this.data.silver.x, this.data.silver.y, 120, 120);
     ctx.fillText(
       this.data.silver.value, 
@@ -580,7 +588,6 @@ class Rank {
       this.data.silver.y + 85,
     );
 
-    const gold = await Canvas.loadImage(this.data.gold.source);
     ctx.drawImage(gold, this.data.gold.x, this.data.gold.y, 100, 100);
     ctx.fillText(
       this.data.gold.value, 

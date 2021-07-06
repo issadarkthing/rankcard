@@ -7,13 +7,13 @@ const rank = new canvacord.Rank()
     .setAvatar(img)
     .setCurrentXP(50)
     .setRequiredXP(360)
-    .setBackground("IMAGE", bg)
     .setStatus("dnd")
-    .setOverlay("#000")
+    .setOverlay("#000", 0.3)
     .setProgressBar("#ff0800", "COLOR", false)
     .setUsername("Snowflake Game Master Foul Master")
+    .setBackground("COLOR", "#2a2e35")
     .setBronze(5)
-    .setSilver(3)
+    .setSilver(4)
 
 rank.build().then(data => { 
   canvacord.write(data, "RankCard.png"); 
