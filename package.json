@@ -1,0 +1,35 @@
+{
+  "name": "rankcard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/"],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:show": "node dist/test/index.js && sxiv RankCard.png"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issadarkthing/rankcard.git"
+  },
+  "author": "issadarkthing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/issadarkthing/rankcard/issues"
+  },
+  "homepage": "https://github.com/issadarkthing/rankcard#readme",
+  "devDependencies": {
+    "@types/node": "^16.0.0"
+  },
+  "dependencies": {
+    "@canvacord/assets": "^1.0.2",
+    "@canvacord/emoji-parser": "^1.0.1",
+    "@types/moment-duration-format": "^2.2.2",
+    "canvas": "^2.8.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2"
+  }
+}
