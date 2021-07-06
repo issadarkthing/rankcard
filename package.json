@@ -1,5 +1,5 @@
 {
-  "name": "rankcard",
+  "name": "@jiman24/rankcard",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
