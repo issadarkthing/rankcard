@@ -44,19 +44,19 @@ class Rank {
         width: 180,
       },
       gold: {
-        source: "https://www.unrankedsmurfs.com/storage/ruoxfp7El8hKfK6IFEK6i9zA0VPvlXa6ac5XG3HA.png",
+        source: "https://cdn.discordapp.com/attachments/890967668499296326/940945480295260182/ruoxfp7El8hKfK6IFEK6i9zA0VPvlXa6ac5XG3HA.png",
         value: 0,
         x: 280,
         y: 240,
       },
       silver: {
-        source: "https://emoji.gg/assets/emoji/5633_Silver.png",
+        source: "https://cdn.discordapp.com/attachments/890967668499296326/940945479959711794/5633_Silver.png",
         value: 0,
         x: 480,
         y: 230,
       },
       bronze: {
-        source: "https://emoji.gg/assets/emoji/8300_Bronze.png",
+        source: "https://cdn.discordapp.com/attachments/890967668499296326/940945479741620294/8300_Bronze.png",
         value: 0,
         x: 680,
         y: 230,
@@ -573,6 +573,8 @@ class Rank {
       Canvas.loadImage(this.data.silver.source),
       Canvas.loadImage(this.data.gold.source),
     ]);
+
+    console.log("here");
 
     ctx.drawImage(bronze, this.data.bronze.x, this.data.bronze.y, 120, 120);
     ctx.fillText(

@@ -1,6 +1,6 @@
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
-import { CanvasRenderingContext2D, NodeCanvasRenderingContext2D } from "canvas";
+import { CanvasRenderingContext2D } from "canvas";
 import { fillTextWithTwemoji } from "@canvacord/emoji-parser";
 
 export interface UtilGetLines {
@@ -225,7 +225,7 @@ class Util {
     return lines;
   }
 
-  static circle(ctx: NodeCanvasRenderingContext2D, w: number, h: number) {
+  static circle(ctx: CanvasRenderingContext2D, w: number, h: number) {
     ctx.globalCompositeOperation = "destination-in";
     ctx.beginPath();
     ctx.arc(w / 2, h / 2, h / 2, 0, Math.PI * 2);
@@ -235,7 +235,7 @@ class Util {
   }
 
   static rect(
-    ctx: NodeCanvasRenderingContext2D,
+    ctx: CanvasRenderingContext2D,
     x: number,
     y: number,
     height: number,
@@ -279,7 +279,7 @@ class Util {
   }
 
   static round(
-    ctx: NodeCanvasRenderingContext2D,
+    ctx: CanvasRenderingContext2D,
     x: number,
     y: number,
     width: number,
